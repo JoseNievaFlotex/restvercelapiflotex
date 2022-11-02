@@ -15,12 +15,12 @@ export class UsersController {
   }
 
   @Get()
-  async findAll() {
+   findAll() {
    return this.userService.findAll();
   }
 
   @Get(':id')
-  async findOne(@Param('id' , ParseIntPipe) id: number) {
+  findOne(@Param('id' , ParseIntPipe) id: number) {
     return this.userService.findOne(id)
   }
 
